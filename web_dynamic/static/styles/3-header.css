@@ -6,6 +6,22 @@ header {
 }
 header .logo {
     background: url("../images/logo.png") no-repeat;
-    left: 20px;
+    left: 30px;
     height: 100%;
+}
+
+header #api_status {
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 30px;
+    background-color: #cccccc;
+    position: relative;
+}
+
+header .available {
+    background-color:  #ff545f !important;
 }
