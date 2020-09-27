@@ -1,107 +1,129 @@
-.container .filters {
-    position: relative;
-    background: white;
+.filters {
+    color: white;
     height: 70px;
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
 }
+
 button {
-    position: absolute;
     font-size: 18px;
-    background: #FF5A5F;
+    background-color: #FF5A5F;
     color: #FFFFFF;
     height: 48px;
     width: 20%;
-    border-style: none;
+    border: none;
     border-radius: 4px;
-    top: 15%;
-    right: 30px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 12px;
+    cursor: pointer;
 }
+
 button:hover {
     opacity: 0.9;
 }
-.filters div {
-    display: inline-grid;
-}
-.filters h2 {
-    margin-left: 15%;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 600;
-}
-.filters h3 {
-    margin-left: 15%;
-    margin-bottom: 0;
-    font-weight: 600;
-}
-.filters h4 {
-    margin-left: 15%;
-    margin-top: 0;
-    font-weight: 400;
-    font-size: 14px;
-}
+
 .locations {
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
+    line-height: 100%;
+    text-align: left;
+    float: left;
 }
+
 .amenities {
     height: 100%;
     width: 25%;
+    line-height: 100%;
+    text-align: left;
+    float: left;
 }
-
 .amenities input {
     margin-right: 10px;
 }
 
 .popover {
-    visibility: hidden;
-    width: 100%;
+    position: relative;
+    background-color: #FAFAFA;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    background: #FAFAFA;
-    padding-bottom: 15px;
-    height: 300px;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    max-height: 300px;
-}
-
-.popover::-webkit-scrollbar{
-    width: 0px;
-}
-
-.amenities .popover {
-    padding: 10px 0;
-    margin-left: -5px;
-    margin-top: 0%;
-}
-
-.amenities .popover ul{
-    margin: 0px;
-}
-
-.locations .popover {
-    margin-top: 0%;
-}
-.popover ul {
-    list-style-type: none;
+    padding-top: 20px;
+    padding-left: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
+    width: 91.5%;
+    max-height: 300px;
+    display: none;
+    z-index: 1;
+    overflow: auto;
 }
-.popover ul li{
-    padding: 4px;
-    padding-left: 10px;
+.locations > .popover > li {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.locations > .popover > li > ul {
+    padding-left: 5px;
+}
+.locations > .popover > li > ul > li {
+    margin-bottom: 10px;
+}
+.popover, .popover ul {
+    list-style-type: none;
 }
 
-.popover ul h2{
-    margin-top: 1.5%;
-    margin-bottom: 5%;
-    margin-left: 0px;
+.popover::-webkit-scrollbar {
+    display: block;
 }
 
-.amenities:hover .popover,
 .locations:hover .popover {
-    visibility: visible;
+    display: block;
+}
+
+.amenities .popover{
+    float: right;
+    padding-left: 7px;
+    width: 97%;
+}
+
+.amenities:hover .popover{
+    display: block;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+}
+
+li {
+    color: black;
+    list-style: none;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    padding-left: 40px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    padding-left: 20px;
+    margin-top: -10px;
+    white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+h2 {
+    color: black;
+    font-size: 16px;
 }
