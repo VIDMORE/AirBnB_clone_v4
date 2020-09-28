@@ -7,7 +7,11 @@ $(function () {
     } else {
       delete amenities[$(this).attr('data-id')];
     }
-    $('.amenities h4').text(Object.values(amenities).join(', '));
+    if (Object.values(amenities).length === 0) {
+      $('.amenities h4').html('&nbsp');
+    } else {
+      $('.amenities h4').text(Object.values(amenities).join(', '));
+    }
   });
 
   $.get('http://127.0.0.1:5001/api/v1/status/', (data, status) => {
